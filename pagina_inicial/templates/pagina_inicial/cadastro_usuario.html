@@ -1,0 +1,58 @@
+<!-- Codigo do Cadastro -->
+{% extends "base.html" %}
+{% block content %}
+<section class="pb-4">
+    <div class="border rounded-5">
+        <section class="w-100 p-4 d-flex justify-content-center pb-4">
+            <form style="width: 22rem;" method="post">
+                <h2 class="my-5">Cadastro</h2>
+                {% csrf_token %}
+                <!-- Usuário input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="username">Usuário</label>
+                    <input type="text" class="form-control" name="username" placeholder="Usuário" id="username" />
+                </div>
+
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="text" class="form-control" name="email" placeholder="Email" id="email" />
+                </div>
+
+                <!-- Primeiro Nome input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="first_name">Nome</label>
+                    <input type="text" class="form-control" name="first_name" placeholder="Nome" id="first_name" />
+                </div>
+
+                <!-- Sobrenome input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="last_name">Sobrenome</label>
+                    <input type="text" class="form-control" name="last_name" placeholder="Sobrenome" id="last_name" />
+                </div>
+
+                <!-- Senha input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="password">Senha</label>
+                    <input type="password" id="password" class="form-control" name="password" placeholder="Senha" />
+                </div>
+
+                <!-- Confirmar Senha input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="confirm">Confirme a Senha</label>
+                    <input type="password" id="confirm" class="form-control" name="confirm" placeholder="Confirme a Senha" />
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                    class="btn btn-primary btn-block mb-4">Cadastrar</button>
+
+                <!-- Register buttons -->
+                <div class="text-center">
+                    <p>Já tem Login? <a href="/accounts/login/">Entrar</a></p>
+                </div>
+            </form>
+        </section>
+    </div>
+</section>
+{% endblock %}

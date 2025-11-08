@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 import io
 import base64
@@ -20,7 +21,7 @@ def teste(request):
     grafico = grafico.decode('utf-8')
     return render(request, 'colab/teste.html', {'grafico':grafico})
 
-
+@login_required
 def grafico_banco(request):
     df = pd.DataFrame(list(Teste.objects.all().values('categoria','quantidade')))
     sns.barplot(data=df, x = 'categoria', y = 'quantidade')
