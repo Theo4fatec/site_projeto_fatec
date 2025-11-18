@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from .models import  Teste
 import pandas as pd
-from statsmodels.tsa.arima.model import ARIMA
+#from statsmodels.tsa.arima.model import ARIMA
 from django.db import connections
 
 def teste(request):
