@@ -84,7 +84,7 @@ def grafico_1(request):
     plt.plot([serie_oee.index[-1], data_prevista],
              [serie_oee.iloc[-1], oee_previsto],
              linestyle="--", color="gray")
-    plt.title("Previsão OEE – Produto 2027 / Máquina 23")
+    plt.title("Previsão do OEE do Produto 2027 na Máquina 23 na próxima execução")
     plt.xlabel("Data")
     plt.ylabel("OEE (%)")
     plt.grid(True)
