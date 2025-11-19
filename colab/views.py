@@ -126,3 +126,11 @@ def grafico_1(request):
         "data_prevista": data_prevista,
         "oee_previsto": round(float(oee_previsto), 2)
     })
+
+
+@login_required
+def powerbi(request):
+    powerbi_link = "COLE_A_URL_DO_IFRAME_AQUI"
+    return render(request, "colab/powerbi.html", {
+        "powerbi_url": powerbi_link
+    })
