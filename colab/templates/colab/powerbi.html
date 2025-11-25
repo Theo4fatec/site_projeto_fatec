@@ -6,31 +6,9 @@
 
 <div style="text-align:center;">
     <iframe 
-        title="teste" 
-        width="900" 
-        height="600" 
-        src="https://app.powerbi.com/view?r=eyJrIjoiZTU1MjQzMDAtNThjMy00YmQ3LTljODAtZmY2NzVhMDNjYmZlIiwidCI6ImNmNzJlMmJkLTdhMmItNDc4My1iZGViLTM5ZDU3YjA3Zjc2ZiIsImMiOjR9" 
-        frameborder="0" 
-        allowFullScreen="true">
-    </iframe>
-</div>
-
-{% endblock %}
-
-
-<!--outra forma de fazer abaixo:
-
-{% extends "base.html" %}
-{% load static %}
-
-{% block content %}
-<h2>Dashboard Power BI</h2>
-
-<div style="text-align:center;">
-    <iframe 
         width="1000" 
         height="650"
-        src="{{ powerbi_url }}" 
+        src="{{powerbi_url}}" 
         frameborder="0" 
         allowFullScreen="true">
     </iframe>
@@ -38,4 +16,3 @@
 
 {% endblock %}
 
--->
