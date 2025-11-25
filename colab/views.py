@@ -130,7 +130,9 @@ def grafico_1(request):
 
 @login_required
 def powerbi(request):
-    powerbi_link = "COLE_A_URL_DO_IFRAME_AQUI"
+    powerbi_link = "https://app.powerbi.com/view?r=eyJrIjoiZTU1MjQzMDAtNThjMy00YmQ3LTljODAtZmY2NzVhMDNjYmZlIiwidCI6ImNmNzJlMmJkLTdhMmItNDc4My1iZGViLTM5ZDU3YjA3Zjc2ZiIsImMiOjR9"
     return render(request, "colab/powerbi.html", {
         "powerbi_url": powerbi_link
     })
+
+
