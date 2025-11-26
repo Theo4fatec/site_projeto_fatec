@@ -130,9 +130,30 @@ def grafico_1(request):
 
 @login_required
 def powerbi(request):
-    powerbi_link = "https://app.powerbi.com/view?r=eyJrIjoiZTU1MjQzMDAtNThjMy00YmQ3LTljODAtZmY2NzVhMDNjYmZlIiwidCI6ImNmNzJlMmJkLTdhMmItNDc4My1iZGViLTM5ZDU3YjA3Zjc2ZiIsImMiOjR9"
+    powerbi_link = "https://app.powerbi.com/view?r=eyJrIjoiZjA5OGEyOTktNzU5Yi00YzUxLThmYTItMTQxZGI1ZmY1MWUxIiwidCI6ImNmNzJlMmJkLTdhMmItNDc4My1iZGViLTM5ZDU3YjA3Zjc2ZiIsImMiOjR9"
     return render(request, "colab/powerbi.html", {
         "powerbi_url": powerbi_link
+    })
+
+@login_required
+def powerbi_2(request):
+    powerbi_link_2 = "https://app.powerbi.com/view?r=eyJrIjoiMWE2Y2I5YzMtZWU3My00ODI0LWE5MWQtN2VmMDg4MGIxN2E2IiwidCI6ImNmNzJlMmJkLTdhMmItNDc4My1iZGViLTM5ZDU3YjA3Zjc2ZiIsImMiOjR9"
+    return render(request, "colab/powerbi_2.html", {
+        "powerbi_url_2": powerbi_link_2
+    })
+
+@login_required
+def powerbi_3(request):
+    powerbi_link_3 = "https://app.powerbi.com/view?r=eyJrIjoiZjA5OGEyOTktNzU5Yi00YzUxLThmYTItMTQxZGI1ZmY1MWUxIiwidCI6ImNmNzJlMmJkLTdhMmItNDc4My1iZGViLTM5ZDU3YjA3Zjc2ZiIsImMiOjR9"
+    return render(request, "colab/powerbi_3.html", {
+        "powerbi_url_3": powerbi_link_3
+    })
+
+@login_required
+def powerbi_4(request):
+    powerbi_link_4 = "https://app.powerbi.com/view?r=eyJrIjoiZjA5OGEyOTktNzU5Yi00YzUxLThmYTItMTQxZGI1ZmY1MWUxIiwidCI6ImNmNzJlMmJkLTdhMmItNDc4My1iZGViLTM5ZDU3YjA3Zjc2ZiIsImMiOjR9"
+    return render(request, "colab/powerbi_4.html", {
+        "powerbi_url_4": powerbi_link_4
     })
 
 
