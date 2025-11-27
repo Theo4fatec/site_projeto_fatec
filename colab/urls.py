@@ -9,8 +9,5 @@ urlpatterns = [
     path('grafico_2', grafico_2, name="grafico_2"),
     path('grafico_3', grafico_3, name="grafico_3"),
     path('powerbi', powerbi, name='powerbi'),
-    path('powerbi_2', powerbi_2, name='powerbi_2'),
-    path('powerbi_3', powerbi_3, name='powerbi_3'),
-    path('powerbi_4', powerbi_4, name='powerbi_4'),
 
 ]
