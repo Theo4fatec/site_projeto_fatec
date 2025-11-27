@@ -137,7 +137,7 @@ def grafico_2(request):
     query = """
         SELECT registro, produto, maquina, teep
         FROM colab_ega_kpis_prod
-        WHERE produto = 2114 AND maquina = 32
+        WHERE produto = 2027 AND maquina = 23
         ORDER BY registro
     """
 
@@ -188,7 +188,7 @@ def grafico_2(request):
         color="gray"
     )
 
-    plt.title("Previsão do TEEP do Produto 2114 na Máquina 32 na próxima execução")
+    plt.title("Previsão do TEEP do Produto 2027 na Máquina 23 na próxima execução")
     plt.xlabel("Data")
     plt.ylabel("TEEP (%)")
     plt.grid(True)
