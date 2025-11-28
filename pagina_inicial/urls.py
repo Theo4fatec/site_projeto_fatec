@@ -7,4 +7,5 @@ urlpatterns = [
     path('accounts/login/', login_cadastro, name = 'login_cadastro'),
     path('accounts/logout/', logout_usuario, name = 'logout_usuario'),
     path('cadastro', cadastro_usuario, name = 'cadastro_usuario'),
+    #path('cadastro/<str:msg>/', cadastro_usuario, name = 'cadastro_usuario'),
 ]

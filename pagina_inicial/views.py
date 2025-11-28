@@ -28,20 +28,24 @@ def logout_usuario(request):
 
 
 def cadastro_usuario(request):
-	if request.method == "GET":
-		return render(request, "pagina_inicial/cadastro_usuario.html")
-	else:
-		post = request.POST
-		user = User.objects.create_user(
-			username = post.get("username"),
-			email = post.get("email"),
-			first_name = post.get("first_name"),
-			last_name = post.get("last_name"),
-			password = post.get("password")
-		)
-		user = authenticate(
-			username=post.get("username"),
-			password=post.get("password")
-		)
-		login(request, user)
-		return redirect("/")
+    if request.method == "GET":
+        print("msg:", request.GET.get("msg"))
+        return render(request, "pagina_inicial/cadastro_usuario.html")
+    else:
+        post = request.POST
+        username = post.get("username")
+        if User.objects.filter(username=username).exists():
+            return render(request, "pagina_inicial/cadastro_usuario.html",{"msg":"abobrinha"})
+        user = User.objects.create_user(
+            username = post.get("username"),
+            email = post.get("email"),
+            first_name = post.get("first_name"),
+            last_name = post.get("last_name"),
+            password = post.get("password")
+        )
+        user = authenticate(
+            username=post.get("username"),
+            password=post.get("password")
+        )
+        login(request, user)
+        return redirect("/")
