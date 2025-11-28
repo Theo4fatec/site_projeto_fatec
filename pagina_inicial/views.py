@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from .forms import SignUpForm
 
 def home(request):
     return render(request, 'pagina_inicial/home.html')
@@ -29,7 +30,7 @@ def logout_usuario(request):
 
 def cadastro_usuario(request):
 	if request.method == "GET":
-		return render(request, "pagina_inicial/cadastro_usuario.html")
+		return render(request, "pagina_inicial/cadastro_usuario.html", {"form":SignUpForm})
 	else:
 		post = request.POST
 		user = User.objects.create_user(

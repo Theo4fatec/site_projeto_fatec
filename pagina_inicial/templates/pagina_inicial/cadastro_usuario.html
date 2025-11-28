@@ -7,6 +7,17 @@
             <form style="width: 22rem;" method="post">
                 <h2 class="my-5">Cadastro</h2>
                 {% csrf_token %}
+                
+
+                {% for field in form %}
+                <div data-mdb-input-init class="form-outline mb-4">
+                    {{ field.errors }}
+                    {{ field.label_tag }} 
+                    {{ field }}
+                </div>
+                {% endfor %}
+
+
                 <!-- Usuário input -->
                 <div data-mdb-input-init class="form-outline mb-4">
                     <label class="form-label" for="username">Usuário</label>
